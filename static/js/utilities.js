@@ -8,9 +8,9 @@ const selectNextForm = (reason) => {
   reason = reason.toLowerCase();
 
   const templates = {
-    cruelty: "my husband hits me",
-    mutual: "we just want a divorce and have settled mutually",
-    adultary: "my husband has been cheating on me with another women",
+    'Cruelty': "my husband hits me",
+    'Mutual Consent': "we just want a divorce and have settled mutually",
+    'Adultery': "my husband has been cheating on me with another women",
   };
 
   for (const template in templates) {
