@@ -1,0 +1,121 @@
+.choice-container {
+  width: 100%;
+  display: flex;
+  overflow: auto;
+  min-height: 100vh;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-image: radial-gradient(circle at center, rgb(194, 229, 156) 0.00%,rgb(194, 229, 156) 46.00%,rgb(104, 173, 229) 96.00%);
+}
+.choice-form {
+  width: 1059px;
+  height: 998px;
+  display: flex;
+  position: relative;
+  box-shadow: 5px 5px 10px 0px #464242;
+  align-items: center;
+  justify-content: center;
+  background-color: #f9f1f1;
+}
+.choice-text {
+  top: 92px;
+  left: 398px;
+  height: 58px;
+  position: absolute;
+  font-style: normal;
+  font-family: Merriweather;
+  font-weight: 800;
+}
+.choice-button {
+  top: 216px;
+  left: 102px;
+  width: 251px;
+  height: 169px;
+  position: absolute;
+  font-size: 2rem;
+  box-shadow: rgb(76, 72, 72) 5px 5px 10px 0px;
+  font-style: normal;
+  transition: 0.3s;
+  font-family: Noto Sans;
+  font-weight: 500;
+  line-height: 3;
+  border-radius: 16px;
+}
+.choice-button:hover {
+  color: #f9f3f3;
+  background-color: #040e48;
+}
+.choice-button1 {
+  top: 225px;
+  right: 72px;
+  width: 241px;
+  height: 157px;
+  position: absolute;
+  font-size: 2rem;
+  box-shadow: rgb(52, 51, 51) 5px 5px 10px 0px;
+  font-style: normal;
+  transition: 0.3s;
+  font-family: Noto Sans;
+  font-weight: 500;
+  border-radius: 16px;
+  background-color: rgb(255, 255, 255);
+}
+.choice-button1:hover {
+  color: var(--dl-color-gray-white);
+  background-color: #040e48;
+}
+.choice-button2 {
+  top: 505px;
+  left: 253px;
+  width: 245px;
+  height: 166px;
+  position: absolute;
+  font-size: 2rem;
+  box-shadow: rgb(54, 52, 52) 5px 5px 10px 0px;
+  font-style: normal;
+  transition: 0.3s;
+  font-family: Noto Sans;
+  font-weight: 500;
+  border-radius: 16px;
+}
+.choice-button2:hover {
+  color: var(--dl-color-gray-white);
+  background-color: #040e48;
+}
+.choice-button3 {
+  top: 504px;
+  left: 586px;
+  width: 262px;
+  height: 164px;
+  position: absolute;
+  font-size: 2rem;
+  box-shadow: rgb(60, 56, 56) 5px 5px 10px 0px;
+  font-style: normal;
+  transition: 0.3s;
+  font-family: Noto Sans;
+  font-weight: 500;
+  border-radius: 16px;
+}
+.choice-button3:hover {
+  color: #fffdfd;
+  background-color: #040e48;
+}
+.choice-button4 {
+  top: 222px;
+  left: 427px;
+  width: 248px;
+  height: 161px;
+  position: absolute;
+  font-size: 2rem;
+  box-shadow: rgb(58, 55, 55) 5px 5px 10px 0px;
+  font-style: normal;
+  transition: 0.3s;
+  font-family: Noto Sans;
+  font-weight: 500;
+  border-radius: 16px;
+}
+.choice-button4:hover {
+  color: #efe8e8;
+  background-color: #040e48;
+}

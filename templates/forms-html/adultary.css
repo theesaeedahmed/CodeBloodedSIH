@@ -1,0 +1,127 @@
+.adultary-container {
+  width: 100%;
+  display: flex;
+  overflow: auto;
+  min-height: 100vh;
+  align-items: center;
+  flex-direction: column;
+}
+.adultary-container1 {
+  width: 100%;
+  display: flex;
+  overflow: auto;
+  box-shadow: 5px 5px 10px 0px #d4d4d4;
+  min-height: 100vh;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-image: radial-gradient(circle at center, rgb(173, 219, 124) 18.00%,rgb(100, 179, 244) 100.00%);
+}
+.adultary-form {
+  width: 861px;
+  height: 1103px;
+  display: flex;
+  position: relative;
+  box-shadow: 5px 5px 10px 0px #4a4848;
+  align-items: flex-end;
+  margin-bottom: var(--dl-space-space-threeunits);
+  justify-content: center;
+  background-color: #f3ebeb;
+}
+.adultary-text {
+  top: 36px;
+  left: 246px;
+  width: 368px;
+  height: 80px;
+  position: absolute;
+  font-family: Georgia;
+  padding-top: var(--dl-space-space-halfunit);
+}
+.adultary-text1 {
+  top: 132px;
+  left: 88px;
+  position: absolute;
+  font-family: Old Standard TT;
+}
+.adultary-text2 {
+  top: 262px;
+  left: 85px;
+  position: absolute;
+  font-family: Old Standard TT;
+}
+.adultary-text3 {
+  top: 383px;
+  left: 81px;
+  position: absolute;
+  font-family: Old Standard TT;
+}
+.adultary-text4 {
+  top: 493px;
+  left: 85px;
+  position: absolute;
+  font-family: Old Standard TT;
+}
+.adultary-text5 {
+  top: 613px;
+  left: 87px;
+  position: absolute;
+  font-family: Old Standard TT;
+}
+.adultary-text6 {
+  top: 746px;
+  left: 81px;
+  position: absolute;
+  font-family: Old Standard TT;
+}
+.adultary-textinput {
+  top: 646px;
+  left: 86px;
+  width: 607px;
+  height: 37px;
+  position: absolute;
+}
+.adultary-textinput1 {
+  top: 778px;
+  left: 83px;
+  width: 605px;
+  height: 36px;
+  position: absolute;
+}
+.adultary-textinput2 {
+  top: 527px;
+  left: 84px;
+  width: 605px;
+  position: absolute;
+}
+.adultary-textinput3 {
+  top: 412px;
+  left: 83px;
+  width: 608px;
+  position: absolute;
+}
+.adultary-textinput4 {
+  top: 291px;
+  left: 84px;
+  width: 610px;
+  position: absolute;
+}
+.adultary-textinput5 {
+  top: 162px;
+  left: 83px;
+  width: 609px;
+  position: absolute;
+}
+.adultary-button {
+  top: 922px;
+  right: 68px;
+  width: 138px;
+  height: 48px;
+  position: absolute;
+  transition: 0.3s;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.adultary-button:hover {
+  color: var(--dl-color-gray-white);
+  background-color: var(--dl-color-gray-black);
+}

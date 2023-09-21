@@ -1,0 +1,237 @@
+.main-form-container {
+  width: 100%;
+  display: flex;
+  overflow: auto;
+  box-shadow: 5px 5px 10px 0px #d4d4d4;
+  min-height: 100vh;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-image: radial-gradient(circle at center, rgb(173, 219, 124) 18.00%,rgb(100, 179, 244) 100.00%);
+}
+.main-form-form {
+  width: 861px;
+  height: 2274px;
+  display: flex;
+  position: relative;
+  box-shadow: 5px 5px 10px 0px #4a4848;
+  align-items: flex-end;
+  margin-bottom: var(--dl-space-space-threeunits);
+  justify-content: center;
+  background-color: #f3ebeb;
+}
+.main-form-text {
+  top: 36px;
+  left: 246px;
+  width: 368px;
+  height: 80px;
+  position: absolute;
+  font-family: Georgia;
+  padding-top: var(--dl-space-space-halfunit);
+}
+.main-form-text01 {
+  top: 132px;
+  left: 88px;
+  position: absolute;
+  font-family: Old Standard TT;
+}
+.main-form-text02 {
+  top: 262px;
+  left: 85px;
+  position: absolute;
+  font-family: Old Standard TT;
+}
+.main-form-text03 {
+  top: 382px;
+  left: 83px;
+  position: absolute;
+  font-family: Old Standard TT;
+}
+.main-form-text04 {
+  top: 493px;
+  left: 85px;
+  position: absolute;
+  font-family: Old Standard TT;
+}
+.main-form-text05 {
+  top: 613px;
+  left: 87px;
+  position: absolute;
+  font-family: Old Standard TT;
+}
+.main-form-text06 {
+  top: 745px;
+  left: 82px;
+  position: absolute;
+  font-family: Old Standard TT;
+}
+.main-form-text07 {
+  top: 886px;
+  left: 81px;
+  position: absolute;
+  font-family: Old Standard TT;
+}
+.main-form-text08 {
+  top: 1013px;
+  left: 83px;
+  position: absolute;
+  font-family: Old Standard TT;
+}
+.main-form-text09 {
+  left: 80px;
+  bottom: 176px;
+  position: absolute;
+  font-family: Old Standard TT;
+}
+.main-form-textinput {
+  top: 646px;
+  left: 85px;
+  width: 607px;
+  height: 37px;
+  position: absolute;
+}
+.main-form-textinput01 {
+  top: 778px;
+  left: 81px;
+  width: 605px;
+  height: 36px;
+  position: absolute;
+}
+.main-form-textinput02 {
+  top: 915px;
+  left: 79px;
+  width: 604px;
+  height: 36px;
+  position: absolute;
+}
+.main-form-textinput03 {
+  left: 81px;
+  width: 596px;
+  bottom: 267px;
+  height: 36px;
+  position: absolute;
+}
+.main-form-textinput04 {
+  left: 77px;
+  width: 588px;
+  bottom: 137px;
+  height: 36px;
+  position: absolute;
+}
+.main-form-textinput05 {
+  top: 527px;
+  left: 84px;
+  width: 605px;
+  position: absolute;
+}
+.main-form-textinput06 {
+  top: 412px;
+  left: 83px;
+  width: 608px;
+  position: absolute;
+}
+.main-form-textinput07 {
+  top: 291px;
+  left: 84px;
+  width: 610px;
+  position: absolute;
+}
+.main-form-textinput08 {
+  top: 166px;
+  left: 84px;
+  width: 609px;
+  position: absolute;
+}
+.main-form-text10 {
+  top: 1168px;
+  left: 76px;
+  position: absolute;
+  font-family: Old Standard TT;
+}
+.main-form-text11 {
+  top: 1321px;
+  left: 80px;
+  position: absolute;
+  font-family: Old Standard TT;
+}
+.main-form-text14 {
+  left: 81px;
+  bottom: 309px;
+  position: absolute;
+  font-family: Old Standard TT;
+}
+.main-form-text17 {
+  top: 1772px;
+  left: 82px;
+  position: absolute;
+  font-family: Old Standard TT;
+}
+.main-form-text18 {
+  top: 1470px;
+  left: 78px;
+  position: absolute;
+  font-family: Old Standard TT;
+}
+.main-form-text19 {
+  top: 1619px;
+  left: 78px;
+  position: absolute;
+  font-family: Old Standard TT;
+}
+.main-form-textinput09 {
+  top: 1355px;
+  left: 83px;
+  width: 599px;
+  height: 38px;
+  position: absolute;
+}
+.main-form-textinput10 {
+  top: 1657px;
+  left: 77px;
+  width: 596px;
+  height: 39px;
+  position: absolute;
+}
+.main-form-textinput11 {
+  top: 1046px;
+  left: 80px;
+  width: 604px;
+  height: 44px;
+  position: absolute;
+}
+.main-form-textinput12 {
+  top: 1209px;
+  left: 83px;
+  width: 603px;
+  height: 39px;
+  position: absolute;
+}
+.main-form-textinput13 {
+  top: 1503px;
+  left: 78px;
+  width: 596px;
+  height: 39px;
+  position: absolute;
+}
+.main-form-textinput14 {
+  top: 1809px;
+  left: 77px;
+  width: 593px;
+  height: 36px;
+  position: absolute;
+}
+.main-form-button {
+  right: 45px;
+  width: 138px;
+  bottom: 15px;
+  height: 48px;
+  z-index: 100;
+  position: absolute;
+  transition: 0.3s;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.main-form-button:hover {
+  color: var(--dl-color-gray-white);
+  background-color: var(--dl-color-gray-black);
+}
