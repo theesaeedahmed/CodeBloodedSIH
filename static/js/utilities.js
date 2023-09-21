@@ -4,23 +4,23 @@ let textDataElement;
 const generateButton = document.getElementById('generateButton');
 const mergedFormData = {};
 
-const selectNextForm = (reason) => {
-  reason = reason.toLowerCase();
+// const selectNextForm = (reason) => {
+//   reason = reason.toLowerCase();
 
-  const templates = {
-    'Cruelty': "my husband hits me",
-    'Mutual Consent': "we just want a divorce and have settled mutually",
-    'Adultery': "my husband has been cheating on me with another women",
-  };
+//   const templates = {
+//     'Cruelty': "my husband hits me",
+//     'Mutual Consent': "we just want a divorce and have settled mutually",
+//     'Adultery': "my husband has been cheating on me with another women",
+//   };
 
-  for (const template in templates) {
-    if (reason === templates[template]) {
-      return template;
-    }
-  }
+//   for (const template in templates) {
+//     if (reason === templates[template]) {
+//       return template;
+//     }
+//   }
 
-  return "No Templates Available";
-};
+//   return "No Templates Available";
+// };
 
 const renderNextForm = (nextFormPath) => {
   return new Promise((resolve, reject) => {
@@ -41,10 +41,12 @@ const collectFormData = (form) => {
   return new FormData(form);
 }
 
-const generateContent = () => {
+const generateContent = (templatePath) => {
   return new Promise(async (resolve, reject) => {
+
     
-    const res = await fetch('./static/documentTemplates/divorce/cruelty.txt');
+    
+    const res = await fetch(templatePath);
     const content = await res.text();
 
     console.log(content);
@@ -172,7 +174,7 @@ const handleGenerateButton = (event) => {
     });
 }
 
-const handleFinalSubmission = async (event) => {
+const handleFinalSubmission = async (event, templatePath) => {
 
   event.preventDefault();
 
@@ -185,7 +187,7 @@ const handleFinalSubmission = async (event) => {
     mergedFormData[key] = value;
   }
 
-  const generatedContent = await generateContent(); 
+  const generatedContent = await generateContent(templatePath); 
 
   console.log(generatedContent);
 
@@ -213,16 +215,85 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     const reason = formData.get("reason"); //getting the reason of divorce input
-    const nextFormPath = `./${selectNextForm(reason)}.html`;
-    console.log(nextFormPath);
+    // const nextForm = selectNextForm(reason);
+    // const nextFormPath = `./${nextForm}.html`;
+    // console.log(nextFormPath);
 
+    let nextForm;
+    let nextFormPath;
+    let templatePath;
+
+
+
+    try {
+      // Send a POST request to your Django API endpoint
+      const response = await fetch('/api/classify/', {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/x-www-form-urlencoded',
+              'X-CSRFToken': getCookie('csrftoken'), // Include CSRF token
+          },
+          body: `user_input=${reason}`,
+      });
+
+
+    // ------------------ poulami --------------------
+    //   const categoryMappings = {
+    //     'Cruelty': 'Cruelty',
+    //     'Mutual Consent': 'Mutual Consent',
+    //     'Adultery': 'Adultery',
+    //   };
+    // -----------------------------------------------
+
+
+    // ----------------- saeed ----------------------- reason to change: to get the required template as per classification of forms
+
+      const categoryMappings = {
+        'Cruelty': '/static/documentTemplates/divorce/cruelty.txt',
+        'Mutual Consent': '/static/documentTemplates/divorce/mutual.txt',
+        'Adultery': '/static/documentTemplates/divorce/adultery.txt',
+      };
+
+    // -----------------------------------------------
+
+      if (response.ok) {
+        const data = await response.json();
+
+        console.log(data);
+
+
+        // ------------ poulami ------------------
+        // nextForm = categoryMappings[data.predicted_category] || data.predicted_category;
+        // ---------------------------------------
+
+
+        // ----------- saeed -------------------- reason to change: to get the required template as per classification of forms
+        nextForm = data.predicted_category;
+        templatePath = categoryMappings[data.predicted_category];
+        // --------------------------------------
+        
+        console.log(nextForm);
+        // Use the predicted_category for redirection
+        nextFormPath = `./${nextForm}.html`;
+      } else {
+          console.error('Failed to classify:', response.statusText);
+      }
+    } catch (error) {
+        console.error('Error:', error);
+    }
+
+    function getCookie(name) {
+      const value = `; ${document.cookie}`;
+      const parts = value.split(`; ${name}=`);
+      if (parts.length === 2) return parts.pop().split(';').shift();
+    }
 
     try {
 
       await renderNextForm(nextFormPath);
       const subForm = document.querySelector(".sub-form");
 
-      subForm.addEventListener('submit', handleFinalSubmission);
+      subForm.addEventListener('submit', (event) => handleFinalSubmission(event, templatePath));
       
     } catch (err) {
       console.error("error rendering next form : ", err);
