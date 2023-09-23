@@ -56,79 +56,92 @@
       <div class="main-form-container">
         <form class="main-form-form teleport-show main-form">
           <h1 class="main-form-text">DIVORCE PETITION</h1>
-          <h2 class="main-form-text01">City of Court</h2>
+          <h2 class="main-form-text01">City of Court *</h2>
           <input
             type="text"
             name="__1__"
             placeholder="Enter city of court"
             class="main-form-textinput08 input"
+            required
           />
-          <h2 class="main-form-text02">Case number</h2>
+          <h2 class="main-form-text02">Case number </h2>
           <input
             type="text"
             name="__2__"
             placeholder="Case Number (Filled by court)"
             class="main-form-textinput07 input"
           />
-          <h2 class="main-form-text03">Name of First Petitioner</h2>
+          <h2 class="main-form-text03">Name of First Petitioner *</h2>
           <input
             type="text"
             name="__3__"
             placeholder="Petitioner 1 name"
             class="main-form-textinput06 input"
+            required
           />
-          <h2 class="main-form-text04">Address of First Petitioner</h2>
+          <h2 class="main-form-text04">Address of First Petitioner *</h2>
           <input
             type="text"
             name="__4__"
             placeholder="Petitioner 1 address"
             class="main-form-textinput05 input"
+            required
+            maxlength = "50"
           />
-          <h2 class="main-form-text05">Name of Second Petitioner</h2>
+          <h2 class="main-form-text05">Name of Second Petitioner *</h2>
           <input
             type="text"
             name="__5__"
             placeholder="Petitioner 2 name"
             class="main-form-textinput input"
+            required
           />
-          <h2 class="main-form-text06">Address of Second Petitioner</h2>
+          <h2 class="main-form-text06">Address of Second Petitioner *</h2>
           <input
             type="text"
             name="__6__"
             placeholder="Petitioner 2 address"
             class="main-form-textinput01 input"
+            required
+            maxlength="50"
           />
           <h2 class="main-form-text07">
-            Date when the marriage was solemnized
+            Date when the marriage was solemnized *
           </h2>
           <input
             type="text"
             name="__7__"
             placeholder="Date of Marriage"
+            required
             class="main-form-textinput02 input"
           />
-          <h2 class="main-form-text08">City of marriage</h2>
+          <h2 class="main-form-text08">City of marriage *</h2>
           <input
             type="text"
             name="__8__"
             placeholder="City Married In"
             class="main-form-textinput11 input"
+            required
           />
-          <h2 class="main-form-text09">Reason of the divorce</h2>
+          <h2 class="main-form-text09">Reason of the divorce *</h2>
           <input
             type="text"
             name="reason"
             placeholder="Reason"
             class="main-form-textinput04 input"
+            required
+            maxlength="40"
           />
           <h2 class="main-form-text10">
-            Address where the husband and wife cohabited
+            Address where the husband and wife cohabited *
           </h2>
           <input
             type="text"
             name="__9__"
             placeholder="Address of the couple after marriage"
             class="main-form-textinput12 input"
+            required
+            maxlength="50"
           />
           <h2 class="main-form-text11">
             <span>Number of children(if any</span>
@@ -179,7 +192,6 @@
         </form>
       </div>
     </div>
-    <div class="addTextAreaHere"></div>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.16.0/pdf-lib.js"></script> -->
     <script type="module" src="{% static 'js/utilities.js' %}"></script>
   </body>

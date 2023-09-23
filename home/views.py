@@ -3,13 +3,15 @@ from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from .classify import classify_text  # Import your classify function
 from home.models import login
+# import json
 
 # Create your views here.
 def index(request):
     # context={
     #     'variable':'this is sent'
     # }
-    return render(request,'index(landing).html')
+    # return render(request,'index(landing).html')
+    return render(request,'index 2.html')
     # return HttpResponse('this is about')
 
 def draft(request):
@@ -35,7 +37,9 @@ def mainformdivorce(request):
 @csrf_exempt  # Use this decorator to disable CSRF protection for simplicity (not recommended for production)
 def classify(request):
     if request.method == 'POST':
-        user_input = request.POST.get('user_input', '')
+        # data=json.loads(request.body)
+        user_input = request.POST.get('user_input','family')
+        print("User input is:",user_input)
         predicted_category = classify_text(user_input)
 
         # Return the prediction result as JSON
@@ -51,3 +55,12 @@ def adultary(request):
 
 def mutual(request):
     return render(request,'mutual.html')
+
+def topics(request):
+    return render(request,'topics-detail.html')
+
+def listing(request):
+    return render(request,'topics-listing.html')
+
+def contact(request):
+    return render(request,'contact.html')

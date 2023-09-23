@@ -9,14 +9,16 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 app.use('/pdfs', express.static(path.join(__dirname, 'pdfs')));
+app.use('/documentTemplates', express.static(path.join(__dirname, 'documentTemplates')));
 
 app.post('/generate-pdf', async (req, res) => {
-  const { text } = req.body;
-
-
-  console.log('text recieved at the server : ', text);
+  const { formData, htmlTemplatePath } = req.body;
 
   try {
+
+    console.log('-- working --at 19');
+
+    /* ---------------------- old server code -------------------------------
     const pdfBuffer = await createPDF(text);
     console.log('response buffer to be sent by the server', pdfBuffer);
 
@@ -47,6 +49,17 @@ app.post('/generate-pdf', async (req, res) => {
 
     res.status(200).json({pdfURL : `/pdfs/${pdfFileName}`});
 
+    ---------------------- old server code ------------------------
+    */
+
+   
+   const pdfPath = await createPDF(formData, htmlTemplatePath);
+
+   console.log('\n\n -------------------- abcd ------------------- 91 \n\n\n');
+
+    console.log('\n\npdf saved at : ', pdfPath);
+
+    res.status(200).json({pdfURL : pdfPath});
 
   } catch (error) {
     res.status(500).json({ error: 'PDF generation failed' });

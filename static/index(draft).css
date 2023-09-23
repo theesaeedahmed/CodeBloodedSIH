@@ -6,11 +6,11 @@
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  background-image: radial-gradient(circle at center, rgb(194, 229, 156) 0.00%,rgb(194, 229, 156) 46.00%,rgb(104, 173, 229) 96.00%);
+  background-image: radial-gradient(circle at center, rgb(102, 5, 5) 0.00%,rgb(220, 193, 123) 46.00%,rgb(56, 18, 2) 96.00%);
 }
 .choice-form {
   width: 1059px;
-  height: 998px;
+  height: 1033px;
   display: flex;
   position: relative;
   box-shadow: 5px 5px 10px 0px #464242;
@@ -44,7 +44,7 @@
 }
 .choice-button:hover {
   color: #f9f3f3;
-  background-color: #040e48;
+  background-color: #370a0a;
 }
 .choice-button1 {
   top: 225px;
@@ -63,7 +63,7 @@
 }
 .choice-button1:hover {
   color: var(--dl-color-gray-white);
-  background-color: #040e48;
+  background-color: #370a0a;
 }
 .choice-button2 {
   top: 505px;
@@ -81,7 +81,7 @@
 }
 .choice-button2:hover {
   color: var(--dl-color-gray-white);
-  background-color: #040e48;
+  background-color: #370a0a;
 }
 .choice-button3 {
   top: 504px;
@@ -99,7 +99,7 @@
 }
 .choice-button3:hover {
   color: #fffdfd;
-  background-color: #040e48;
+  background-color: #370a0a;
 }
 .choice-button4 {
   top: 222px;
@@ -117,5 +117,33 @@
 }
 .choice-button4:hover {
   color: #efe8e8;
-  background-color: #040e48;
+  background-color: #370a0a;
+}
+.choice-textinput {
+  left: 98px;
+  width: 738px;
+  bottom: 101px;
+  height: 37px;
+  position: absolute;
+}
+.choice-text1 {
+  left: 99px;
+  width: 530px;
+  bottom: 140px;
+  height: 91px;
+  position: absolute;
+  font-size: 110%;
+  font-family: Noto Sans;
+  font-weight: 500;
+}
+.choice-button5 {
+  right: 139px;
+  bottom: 37px;
+  position: absolute;
+  transition: 0.3s;
+  padding-bottom: var(--dl-space-space-halfunit);
+}
+.choice-button5:hover {
+  color: #f5f3f3;
+  background-color: #370a0a;
 }

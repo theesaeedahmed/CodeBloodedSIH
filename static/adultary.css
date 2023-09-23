@@ -15,7 +15,7 @@
   align-items: center;
   flex-direction: column;
   justify-content: flex-end;
-  background-image: radial-gradient(circle at center, rgb(173, 219, 124) 18.00%,rgb(100, 179, 244) 100.00%);
+  background-image: radial-gradient(circle at center, rgb(102, 5, 5) 18.00%,rgb(220, 193, 123) 100.00%);
 }
 .adultary-form {
   width: 861px;

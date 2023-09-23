@@ -1,0 +1,109 @@
+.app-component-container {
+  display: flex;
+  position: relative;
+}
+.app-component-link {
+  position: relative;
+}
+.app-component-root-class-name {
+  top: 575px;
+  left: 297px;
+  position: absolute;
+}
+
+.home-container {
+  width: 100%;
+  display: flex;
+  overflow: auto;
+  box-shadow: 9px 9px 5px 0px #100101;
+  min-height: 100vh;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-image: linear-gradient(90deg, rgb(194, 229, 156) 0.00%,rgb(100, 179, 244) 100.00%);
+}
+.home-hero {
+  top: -2px;
+  left: 0px;
+  right: 0px;
+  width: 589px;
+  height: 753px;
+  margin: auto;
+  display: flex;
+  padding: 48px;
+  position: absolute;
+  max-width: var(--dl-size-size-maxwidth);
+  box-shadow: 5px 5px 10px 0px rgba(29, 28, 28, 0.68);
+  min-height: 80vh;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #ffffff;
+}
+.home-text {
+  top: 144px;
+  left: 83px;
+  margin: auto;
+  position: absolute;
+  font-size: 25px;
+  align-self: stretch;
+}
+.home-text1 {
+  top: 45px;
+  left: 81px;
+  position: absolute;
+  font-size: 35px;
+}
+.home-textinput {
+  top: 185px;
+  left: 81px;
+  width: 401px;
+  height: 42px;
+  position: absolute;
+}
+.home-text2 {
+  top: 299px;
+  left: 85px;
+  position: absolute;
+  font-size: 25px;
+}
+.home-textinput1 {
+  top: 340px;
+  left: 85px;
+  width: 401px;
+  height: 50px;
+  position: absolute;
+}
+.home-button {
+  top: 445px;
+  left: 96px;
+  color: rgb(246, 246, 255);
+  width: 382px;
+  height: 52px;
+  position: absolute;
+  background-color: rgb(133, 180, 247);
+}
+.home-text3 {
+  top: 576px;
+  left: 198px;
+  position: absolute;
+}
+@media(max-width: 991px) {
+  .home-hero {
+    flex-direction: column;
+  }
+}
+@media(max-width: 767px) {
+  .home-hero {
+    padding-left: var(--dl-space-space-twounits);
+    padding-right: var(--dl-space-space-twounits);
+  }
+}
+@media(max-width: 479px) {
+  .home-hero {
+    padding-top: var(--dl-space-space-twounits);
+    padding-left: var(--dl-space-space-unit);
+    padding-right: var(--dl-space-space-unit);
+    padding-bottom: var(--dl-space-space-twounits);
+  }
+}

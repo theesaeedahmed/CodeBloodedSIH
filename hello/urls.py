@@ -33,6 +33,10 @@ urlpatterns = [
     path('Adultery.html',views.adultary,name='adultary'),
     path('Mutual Consent.html',views.mutual,name='mutual'),
     path('signin.html',views.user_login,name='signin'),
+    path('topics-detail.html',views.topics,name='topics'),
+    path('topics-listing.html',views.listing,name='listing'),
+    path('index.html',views.index,name='home'),
+    path('contact.html',views.contact,name='contact')
     # path('signup.html',views.user_signup,name='signup')
 ]
     # path('about',views.about,name='about'),

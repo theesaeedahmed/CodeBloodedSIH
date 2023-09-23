@@ -1,52 +1,64 @@
       <link href="./static/adultary.css" rel="stylesheet" />
 
+
       <div class="adultary-container">
         <div class="adultary-container1">
           <form class="adultary-form sub-form teleport-show">
             <h1 class="adultary-text">ADULTERY SECTION</h1>
             <h2 class="adultary-text1">
-              Party with whom adultery was committed
+              Party with whom adultery was committed *
             </h2>
-            <h2 class="adultary-text2">Location where it was committed</h2>
-            <h2 class="adultary-text3">Time of marriage</h2>
-            <h2 class="adultary-text4">Name of wife</h2>
-            <h2 class="adultary-text5">Present address of husband</h2>
-            <h2 class="adultary-text6">Alimony</h2>
+            <h2 class="adultary-text2">Location where it was committed *</h2>
+            <h2 class="adultary-text3">Time of marriage *</h2>
+            <h2 class="adultary-text4">Name of wife *</h2>
+            <h2 class="adultary-text5">Present address of husband *</h2>
+            <h2 class="adultary-text6">Alimony *</h2>
             <input
               type="text"
               placeholder="placeholder"
               class="adultary-textinput input"
+              required
             />
             <input
               type="text"
               placeholder="placeholder"
               class="adultary-textinput1 input"
+              required
             />
             <input
               type="text"
               placeholder="placeholder"
               class="adultary-textinput2 input"
+              required
             />
             <input
               type="text"
               placeholder="placeholder"
               class="adultary-textinput3 input"
+              required
             />
             <input
               type="text"
               placeholder="placeholder"
               class="adultary-textinput4 input"
+              required
+              maxlength="5"
             />
             <input
               type="text"
               placeholder="placeholder"
               class="adultary-textinput5 input"
+              required
             />
-            <button type="submit" autofocus="" class="adultary-button button">
-              Submit
+            <button type="submit" id="generateButton" autofocus="" class="adultary-button button" style="padding: 20px; margin: 0 auto 20px; background-color: orange;">
+              Generate PDF
             </button>
-            <button id="generateButton" style="padding: 20px; margin: 0 auto 20px; background-color: orange;">Generate PDF</button>
+            {% comment %} <form action="/create-checkout-session" method="POST">
+              <a href="checkout.html">
+              <button  id="checkout-button" autofocus="" style="padding: 20px; margin: 0 auto 20px; background-color: orange;">Generate PDF on stamp paper</button>
+              </a></form> {% endcomment %}
           </form>
         </div>
       </div>
+      {% comment %} <script src="https://js.stripe.com/v3/"></script> {% endcomment %}
     

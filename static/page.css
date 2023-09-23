@@ -14,7 +14,7 @@
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  background-image: radial-gradient(circle at center, rgb(194, 229, 156) 0.00%,rgb(194, 229, 156) 46.00%,rgb(104, 173, 229) 96.00%);
+  background-image: radial-gradient(circle at center, rgb(102, 5, 5) 0.00%,rgb(220, 193, 123) 46.00%,rgb(56, 18, 2) 96.00%);
 }
 .page-form {
   width: 1059px;
@@ -52,7 +52,7 @@
 }
 .page-button:hover {
   color: #f9f3f3;
-  background-color: #040e48;
+  background-color: #370a0a;
 }
 .page-button1 {
   top: 232px;
@@ -70,5 +70,5 @@
 }
 .page-button1:hover {
   color: #efe8e8;
-  background-color: #040e48;
+  background-color: #370a0a;
 }
