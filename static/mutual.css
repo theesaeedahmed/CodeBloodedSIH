@@ -111,7 +111,7 @@
   width: 609px;
   position: absolute;
 }
-.mutual-button {
+/* .mutual-button {
   top: 922px;
   right: 68px;
   width: 138px;
@@ -124,4 +124,4 @@
 .mutual-button:hover {
   color: #f5eaea;
   background-color: var(--dl-color-gray-black);
-}
+} */
