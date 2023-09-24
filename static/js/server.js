@@ -8,7 +8,7 @@ const app = express();
 
 app.use(cors());
 app.use(express.json());
-app.use('/pdfs', express.static(path.join(__dirname, 'pdfs')));
+// app.use('/pdfs', express.static(path.join(__dirname, 'pdfs')));
 app.use('/documentTemplates', express.static(path.join(__dirname, 'documentTemplates')));
 
 app.post('/generate-pdf', async (req, res) => {
@@ -16,7 +16,9 @@ app.post('/generate-pdf', async (req, res) => {
 
   try {
 
-    console.log('-- working --at 19');
+    // console.log('-- working --at 19');
+
+    // console.log(htmlTemplatePath);
 
     /* ---------------------- old server code -------------------------------
     const pdfBuffer = await createPDF(text);
@@ -55,7 +57,7 @@ app.post('/generate-pdf', async (req, res) => {
    
    const pdfPath = await createPDF(formData, htmlTemplatePath);
 
-   console.log('\n\n -------------------- abcd ------------------- 91 \n\n\n');
+  //  console.log('\n\n -------------------- abcd ------------------- 91 \n\n\n');
 
     console.log('\n\npdf saved at : ', pdfPath);
 

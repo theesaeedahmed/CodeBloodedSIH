@@ -232,7 +232,8 @@ document.addEventListener("DOMContentLoaded", () => {
     let nextFormPath;
     let templatesPaths;
 
-
+    const hasChildren = (formData.get('__10__') != `0` && formData.get('__10__') != '') ? true : false;
+    console.log(formData.get('__10__'), typeof(formData.get('__10__')));
 
     try {
       // Send a POST request to your Django API endpoint
@@ -258,9 +259,9 @@ document.addEventListener("DOMContentLoaded", () => {
     // ----------------- saeed ----------------------- reason to change: to get the required template as per classification of forms
 
       const categoryMappings = {
-        'Cruelty': {txt: '/static/documentTemplates/divorce/cruelty.txt', html: '/static/documentTemplates/divorce/cruelty.html'},
-        'Mutual Consent': {txt: '/static/documentTemplates/divorce/mutual.txt', html: '/static/documentTemplates/divorce/mutual.html'},
-        'Adultery': {txt: '/static/documentTemplates/divorce/adultery.txt', html: '/static/documentTemplates/divorce/adultery.html'},
+        'Cruelty': {txt: './documentTemplates/divorce/cruelty.txt', html: './documentTemplates/divorce/cruelty.html'},
+        'Mutual Consent': {txt: './documentTemplates/divorce/mutual.txt', html: './documentTemplates/divorce/mutual.html'},
+        'Adultery': {txt: './documentTemplates/divorce/adultery.txt', html: './documentTemplates/divorce/adultery.html'},
       };
 
     // -----------------------------------------------
@@ -277,6 +278,17 @@ document.addEventListener("DOMContentLoaded", () => {
         // ----------- saeed -------------------- reason to change: to get the required template as per classification of forms
         nextForm = data.predicted_category;
         templatesPaths = categoryMappings[data.predicted_category];
+
+        
+        if(!hasChildren){
+          console.log('doesnt have children so');
+          const urll = `${templatesPaths.html}`;
+          const halfUrl = urll.substring(0, urll.lastIndexOf('/')+1);
+          const filename = urll.substring(urll.lastIndexOf('/')+1);
+          const newURL = `${halfUrl}new${filename}`;
+          templatesPaths.html = newURL;
+          console.log('\n\n changing template name \n\n');
+        }
         // --------------------------------------
         
         // Use the predicted_category for redirection
